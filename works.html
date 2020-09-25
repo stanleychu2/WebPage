@@ -16,7 +16,7 @@
 		<style>
 			.card-text {
 				text-align: justify;
-			}
+			};
 		</style>
 		<div class="d-flex justify-content-center bg-dark pt-2 pb-2 mb-5 text-white" >
 			<h1 class="p-2 mr-2">Stanley 的作品集</h1>
@@ -155,6 +155,12 @@
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 		<!-- fancy box -->
 		<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+		<!-- http redirect to https -->
+		<script>
+			if (location.protocol != 'https:' && location.protocol != 'file:' ){
+ 				location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+			}
+		</script>
 	</body>
 	<hr>
 	<footer>
