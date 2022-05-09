@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-This is Stanley Chiu Account's home on the web!
+This is Ssu Chiu Account's home on the web!
 
 A data-driven personal website
 ======

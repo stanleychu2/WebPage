@@ -7,9 +7,9 @@
 
 # Site Settings
 locale                   : "zh-TW"
-title                    : "Stanley Chiu"
+title                    : "Ssu Chiu"
 title_separator          : "-"
-name                     : &name "Stanley Chiu"
+name                     : &name "Ssu Chiu"
 description              : &description "Master Student at NTU"
 url                      : https://stanleychu2.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -80,7 +80,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Stanley Chiu"
+  name             : "Ssu Chiu"
   avatar           : "profile.jpeg"
   bio              : "Your biography for the left-hand sidebar"
   location         : "TW, Taipei"

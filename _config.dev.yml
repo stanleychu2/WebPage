@@ -7,9 +7,9 @@
 
 # Site Settings
 locale                   : "zh-TW"
-title                    : "Stanley Chiu"
+title                    : "Ssu Chiu"
 title_separator          : "-"
-name                     : &name "Stanley Chiu"
+name                     : &name "Ssu Chiu"
 description              : &description "Master Student at NTU"
 url                      : http://miulab.chiussu.com:4000 # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"

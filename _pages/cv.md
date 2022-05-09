@@ -9,47 +9,68 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* B.S. in Computer Science (GPA 4.18 / 4.30), National Chengchi University, 2016-2020
-* B.S. in Digital Content and Technologies (DCT), National Chengchi University, 2017-2020
-* M.S. in Networking and Multimedia, National Taiwan University, 2020-2022
+EDUCATION
+---
+National Chengchi University
+  * Bachelor of Computer Science (GPA 4.19 /  4.3), Jul. 2020
+  * Double Major in Digital content & Technologies
+  * TA experience: Programming 101 (2020 Spring), Computer Programming (2020 Spring)
 
-Work experience
-======
-* Summer 2018: Intern
-  * National Chengchi University Computer Center
-  * Duties included: Tagging issues
+National Taiwan University 
+  * Master of Networking and Multimedia (GPA 4.xx / 4.3), Jul. 2022
+  * TA experience: Applied Deep Learning (2022 Spring)
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+EXPERIENCE
+---
+Software Engineer Intern | NCCU Computer Center:        Jul. 2018 – Jun. 2019
+  * Develop and maintain National Chengchi University's application.
+  * Including weather (forecast, air quality), YouBike, bus, map, and food.
+  * Help to adopt Elasticsearch to improve the course search system.
 
-Research experience
-======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+Research Assistant | Chang Lab TW:                       Jan 2020 – Jul. 2020
+  * The Critical Assessment of protein Function Annotation algorithms Challenge (CAFA 4).
+  * Predict the function of a protein from its sequence or structure.
+  * Developed a CNN model, KNN, similarity method.
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+HiSiri | Ministry of Science and Technology:             Jul. 2019 – Feb. 2020
+  * Hi-c improve Sequence assembly In Reads Integration.
+  * Investigate the probability of integrating integer interval and Hi-C information.
+  * Undergraduate student research program, Ministry of Science and Technology (MOST).
 
-Skills
-======
-* Programming Languages
-  * Python
-  * Javascript
-  * C/C++
-  * Ruby
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+Alexa Prize Taskbot Challenge:                           Mar. 2021 – May. 2022 
+  * Skills: Python, AWS, NLU, Transformer, Docker
+  * Build an Alexa skill using the Alexa Skills Kit APIs for use in the United States, which assists Alexa users in accomplishing tasks related to cooking and DIY.
+  * Up to ten teams worldwide will be selected and sponsored by Amazon.
+
+PROJECTS
+---
+Careerhack | TSMC  X  Microsoft
+  * Anomaly Detection, Labeling with AI, Automated Optical Inspection (AOI).
+  * Binarize images and build a VGG16, ResNet50 model to detect defective cloth.
+
+Accounting
+  * Develop an iPad application on Xcode with Swift and SQLite as the database.
+  * It's an application to deal with accounting management and generate vegetable delivery orders.
+
+I'mpression Stamp
+  * Backend: Node.js,  Pixi.js, JSFeat.
+  * Build a device with NodeMCU to transport button data to the website deploying on Azure VM.
+  * Provide an iPad and several buttons for users to design unique paintings.
+
+Bus Tracker 
+  * Backend: ASP.net.
+  * Process the data fetched from Public Transport Data eXchange (PTX).
+  * Apply jQuery Ajax to the real-time bus information.
+
+Technologies and Languages
+---
+* Programming Languages: Python, Ruby, JavaScript, C/C++, Shell Script, Swift
+* Web: jQuery, Node.js, Rails, Django, Nginx
+* Tools: Sublime, Xcode, ITerm, Vim
+* Other Skills: Azure, Pytorch, Linux, Processing
+* Interests: NLP, Dialogue, Website
+* Certification: AZ-900 Microsoft Azure
+
 
 Publications
 ======
