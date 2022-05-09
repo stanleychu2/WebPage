@@ -10,7 +10,7 @@ redirect_from:
 {% include base_path %}
 
 EDUCATION
----
+------
 National Chengchi University
   * Bachelor of Computer Science (GPA 4.19 /  4.3), Jul. 2020
   * Double Major in Digital content & Technologies
@@ -21,7 +21,7 @@ National Taiwan University
   * TA experience: Applied Deep Learning (2022 Spring)
 
 EXPERIENCE
----
+------
 Software Engineer Intern | NCCU Computer Center:        Jul. 2018 – Jun. 2019
   * Develop and maintain National Chengchi University's application.
   * Including weather (forecast, air quality), YouBike, bus, map, and food.
@@ -43,7 +43,7 @@ Alexa Prize Taskbot Challenge:                           Mar. 2021 – May. 2022
   * Up to ten teams worldwide will be selected and sponsored by Amazon.
 
 PROJECTS
----
+------
 Careerhack | TSMC  X  Microsoft
   * Anomaly Detection, Labeling with AI, Automated Optical Inspection (AOI).
   * Binarize images and build a VGG16, ResNet50 model to detect defective cloth.
@@ -63,7 +63,7 @@ Bus Tracker
   * Apply jQuery Ajax to the real-time bus information.
 
 Technologies and Languages
----
+------
 * Programming Languages: Python, Ruby, JavaScript, C/C++, Shell Script, Swift
 * Web: jQuery, Node.js, Rails, Django, Nginx
 * Tools: Sublime, Xcode, ITerm, Vim
