@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Ssu Chiu"
   avatar           : "profile.jpeg"
-  bio              : "Your biography for the left-hand sidebar"
+  bio              : ""
   location         : "TW, Taipei"
   employer         :
   pubmed           :
-  googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            :
+  googlescholar    : "https://scholar.google.com/citations?hl=zh-TW&user=-vMTGNsAAAAJ&view_op=list_works&gmla=AJsN-F5TL7UwW_UVX-6sC_xGT9ooi2Ck6V_4LlhuDZyCt3rZsf9T2EfTF2Yfzsn9YiNPkAtFei6FV6O-Skmf6JOCdqN6AFmAJRO2qTO8J5hPbMmUXjudOk9vL-7jg1rmOuy4MHXKT5ch"
+  email            : "chiussu0320@gmail.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -102,7 +102,7 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
+  linkedin         : stanleychu2"
   orcid            :
   pinterest        :
   soundcloud       :

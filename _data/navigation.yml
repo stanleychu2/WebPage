@@ -14,5 +14,7 @@ main:
       
   - title: "Blog Posts"
     url: /year-archive/
-    
+  
+  - title: "Works"
+    url: /works/
 
