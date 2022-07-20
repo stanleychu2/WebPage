@@ -11,10 +11,9 @@ main:
 
   # - title: "Teaching"
   #   url: /teaching/    
-      
-  - title: "Blog Posts"
-    url: /year-archive/
   
   - title: "Works"
     url: /works/
 
+  - title: "Blog Posts"
+    url: /year-archive/
