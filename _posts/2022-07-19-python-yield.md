@@ -3,13 +3,13 @@ title: 'Python - Yield'
 date: 2022-07-19
 permalink: /posts/2022/07/python-yield_function
 release: true
-tags:
-  - python
+categories: 
+  - Python
 ---
 
 ## Intorductoin
 
-`yield` is a special keyword like `return`. It can create an iterator in Python. If you want to get a value from an iterator, you need to use a `next` function or `for` loop. Sometimes, we find that the list index can't be used directly, `map` and `filter` output. It might mean that the output is an iterator yet be called in the normal way.
+`yield` is a special keyword like `return`. It can create an iterator in Python. If you want to get a value from an iterator, you need to use the `next` function or a `for` loop. Sometimes, we find that the list index can’t be used directly, `map` and `filter` output. It might mean that the output is an iterator yet to be called in the normal way.
 
 ```python
 hello = "Hello world!"
@@ -22,7 +22,7 @@ while True:
     print(nxt)
 ```
 
-Also, we can save memory by using the iterator. The iterator return a value once a time. Thus, we don't need a local variable to store all the outputs. As soon as we require the value, we call the iterator which just maintains the function state. In addition to `iter`, `yield` is an other way to create the iterator. Once we use `yield` to return the value, we consider that function a generator (iterator).
+Also, we can save memory by using the iterator. The iterator returns a value once a time. Thus, we don't need a local variable to store all the outputs. As soon as we require the value, we call the iterator which just maintains the function state. In addition to `iter`, `yield` is another way to create the iterator. Once we use `yield` to return the value, we consider that function a generator (iterator).
 
 ```python
 def constructList(length: int) -> List[int]:
@@ -50,7 +50,7 @@ for n in constructList(10000):
 
 ## Usage
 
-[Leetcode 173. Binary Search Tree Iterator [medium]](https://leetcode.com/problems/binary-search-tree-iterator/) is a good example in practice. In the description, we know that it’s a BST problem. In-order-traversal can help us gain the element in ascending order. However, the problem want to get the element one by one, so we need to turn our DFS function into a generator (iterator).
+[Leetcode 173. Binary Search Tree Iterator [medium]](https://leetcode.com/problems/binary-search-tree-iterator/) is a good example in practice. In the description, we know that it’s a BST problem. In-order-traversal can help us gain the element in ascending order. However, the problem wants to get the elements one by one, so we need to turn our DFS function into a generator (iterator).
 
 ```python
 class BSTIterator:
@@ -75,6 +75,6 @@ class BSTIterator:
     def hasNext(self) -> bool:
         return (False if self._cur is None else True)
 ```
-`yield from something` is equal to `for v in something: yield v`. We fisrt need to get the elements from the left subtree. Second, return the current node value. The last one to return is the right subtree.
+`yield from generator` is equal to `for v in generator: yield v`. We first need to get the elements from the left subtree. Second, return the current node value. The last one to return is the right subtree.
 
 ------
