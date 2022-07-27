@@ -19,7 +19,7 @@
 
 
 
-<title>Future Blog Post - Ssu Chiu</title>
+<title>Python - Scope (nonlocal, global) - Ssu Chiu</title>
 
 
 
@@ -29,15 +29,15 @@
 
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="Ssu Chiu">
-<meta property="og:title" content="Future Blog Post">
+<meta property="og:title" content="Python - Scope (nonlocal, global)">
 
 
-  <link rel="canonical" href="http://localhost:4000/posts/2012/08/blog-post-4/">
-  <meta property="og:url" content="http://localhost:4000/posts/2012/08/blog-post-4/">
+  <link rel="canonical" href="http://localhost:4000/posts/2022/07/python-scope">
+  <meta property="og:url" content="http://localhost:4000/posts/2022/07/python-scope">
 
 
 
-  <meta property="og:description" content="This post will show up by default. To disable scheduling of future posts, edit config.yml and set future: false.">
+  <meta property="og:description" content="Intorductoin">
 
 
 
@@ -52,7 +52,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2199-01-01T00:00:00+08:00">
+  <meta property="article:published_time" content="2022-07-26T00:00:00+08:00">
 
 
 
@@ -251,29 +251,29 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Future Blog Post">
-    <meta itemprop="description" content="This post will show up by default. To disable scheduling of future posts, edit config.yml and set future: false.">
-    <meta itemprop="datePublished" content="January 01, 2199">
+    <meta itemprop="headline" content="Python - Scope (nonlocal, global)">
+    <meta itemprop="description" content="Intorductoin">
+    <meta itemprop="datePublished" content="July 26, 2022">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Future Blog Post
+          <h1 class="page__title" itemprop="headline">Python - Scope (nonlocal, global)
 </h1>
           
             <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
 
 
   
-	  less than 1 minute read
+	  3 minute read
 	
 </p>
           
         
         
         
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2199-01-01T00:00:00+08:00">January 01, 2199</time></p>
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2022-07-26T00:00:00+08:00">July 26, 2022</time></p>
         
         
              
@@ -283,7 +283,83 @@
       
 
       <section class="page__content" itemprop="text">
-        <p>This post will show up by default. To disable scheduling of future posts, edit <code class="language-plaintext highlighter-rouge">config.yml</code> and set <code class="language-plaintext highlighter-rouge">future: false</code>.</p>
+        <h2 id="intorductoin">Intorductoin</h2>
+
+<p>Python does not need to declare variables. However, when we assign a value to a variable. It would decide its scope, the valid zone where you can see the variable. Python searches a variable from inside to outside.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">def</span> <span class="nf">printX</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">x</span>
+
+<span class="n">printX</span><span class="p">()</span> <span class="c1"># output: x = 10
+</span>
+</code></pre></div></div>
+<p>There is a function named <code class="language-plaintext highlighter-rouge">printX</code>. Its purpose is to return the current <code class="language-plaintext highlighter-rouge">x</code> it can get. When we don’t assign a value in the function, we find the nearest x in the global.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">def</span> <span class="nf">printX</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="k">return</span> <span class="n">x</span>
+
+<span class="n">printX</span><span class="p">()</span> <span class="c1"># output: x = 20
+</span>
+</code></pre></div></div>
+<p>If there is a closer <code class="language-plaintext highlighter-rouge">x</code> near <code class="language-plaintext highlighter-rouge">return x</code>, we need to follow the rule from inside to outside, so the output is 20.</p>
+
+<h2 id="nonlocal--global">Nonlocal / Global</h2>
+<p>The last part is the scenario to call the value. What if we want to modify the local or global variables. To do so, Python provides us with two keywords - <code class="language-plaintext highlighter-rouge">nonlocal</code> and <code class="language-plaintext highlighter-rouge">global</code>.
+<code class="language-plaintext highlighter-rouge">global</code> helps us assign a new value to a variable from the global zone. It changes the value permanently. After the function call, the value still maintains the value you set in the function.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># output: x = 10
+</span>
+<span class="k">def</span> <span class="nf">changeX</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">x</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="n">changeX</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># output: x = 20
+</span>
+</code></pre></div></div>
+<p>We build a function to change the variable <code class="language-plaintext highlighter-rouge">x</code> from the global this time. We use the <code class="language-plaintext highlighter-rouge">global</code> to tell the <code class="language-plaintext highlighter-rouge">changeX</code> that we want to modify the <code class="language-plaintext highlighter-rouge">x</code> outside instead to construct a new local variable <code class="language-plaintext highlighter-rouge">x</code>.  We observe the new <code class="language-plaintext highlighter-rouge">x</code> value, as soon as the <code class="language-plaintext highlighter-rouge">changeX</code> is called.</p>
+
+<p><code class="language-plaintext highlighter-rouge">nonlocal</code> does a similar thing yet it apply in the nested function. A nested function is a function inside another function. Apart from nested function, other things are as same as <code class="language-plaintext highlighter-rouge">global</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">outer</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># output: x = 10
+</span>
+    <span class="k">def</span> <span class="nf">inner</span><span class="p">():</span>
+        <span class="k">nonlocal</span> <span class="n">x</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">inner</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># output: x = 20
+</span>
+</code></pre></div></div>
+<p>There are two functions in the upside code. The <code class="language-plaintext highlighter-rouge">inner</code> function represents the nested function in the <code class="language-plaintext highlighter-rouge">outer</code> function. The <code class="language-plaintext highlighter-rouge">nonlocal x</code> in the <code class="language-plaintext highlighter-rouge">inner</code> show that we want to get the modification permission to the <code class="language-plaintext highlighter-rouge">x</code>. It is useful when you want to get some values in the middle of the recursive process.</p>
+
+<h2 id="notice">Notice</h2>
+<p>If you just want to use the function inside the object, you don’t need to use the keywords. You use the keywords only if you need to assign,<code class="language-plaintext highlighter-rouge">=</code>, <code class="language-plaintext highlighter-rouge">+=</code>, <code class="language-plaintext highlighter-rouge">-=</code>,  a new value.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+</span>
+<span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TreeNode</span><span class="p">]):</span>
+    
+    <span class="k">if</span> <span class="n">node</span><span class="p">:</span>
+        <span class="n">dfs</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="n">left</span><span class="p">)</span>
+        <span class="n">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="n">val</span><span class="p">)</span>
+        <span class="n">dfs</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="n">right</span><span class="p">)</span>
+</code></pre></div></div>
+<p>This is a pre-order <code class="language-plaintext highlighter-rouge">dfs</code>. We append a node value to the <code class="language-plaintext highlighter-rouge">result</code> outside the function. However, we don’t need to use any keywords. The <code class="language-plaintext highlighter-rouge">append</code> changes the list object itself.</p>
+
+<hr />
 
         
       </section>
@@ -293,7 +369,11 @@
         
 
 
+
+
   
+
+
 
 
 
@@ -303,25 +383,15 @@
   
 
   <p class="page__taxonomy">
-    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
       
       
-      <a href="http://localhost:4000/tags/#category1" class="page__taxonomy-item" rel="tag">category1</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#category2" class="page__taxonomy-item" rel="tag">category2</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#cool-posts" class="page__taxonomy-item" rel="tag">cool posts</a>
+      <a href="http://localhost:4000/categories/#python" class="page__taxonomy-item" rel="tag">Python</a>
     
     </span>
   </p>
-
-
 
 
       </footer>
@@ -333,11 +403,11 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/posts/2012/08/blog-post-4/" class="btn btn--twitter" title="Share on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/posts/2022/07/python-scope" class="btn btn--twitter" title="Share on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/posts/2012/08/blog-post-4/" class="btn btn--facebook" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/posts/2022/07/python-scope" class="btn btn--facebook" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/posts/2012/08/blog-post-4/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/posts/2022/07/python-scope" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
       
@@ -345,11 +415,12 @@
 
   <nav class="pagination">
     
-      <a href="http://localhost:4000/posts/2022/07/python-scope" class="pagination--pager" title="Python - Scope (nonlocal, global)
+      <a href="http://localhost:4000/posts/2022/07/python-yield_function" class="pagination--pager" title="Python - Yield
 ">Previous</a>
     
     
-      <a href="#" class="pagination--pager disabled">Next</a>
+      <a href="http://localhost:4000/posts/2012/08/blog-post-4/" class="pagination--pager" title="Future Blog Post
+">Next</a>
     
   </nav>
 
@@ -388,7 +459,7 @@
 
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="http://localhost:4000/posts/2022/07/python-scope" rel="permalink">Python - Scope (nonlocal, global)
+        <a href="http://localhost:4000/posts/2012/08/blog-post-4/" rel="permalink">Future Blog Post
 </a>
       
     </h2>
@@ -398,13 +469,13 @@
 
 
   
-	  3 minute read
+	  less than 1 minute read
 	
 </p>
     
 
         
-         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2022-07-26T00:00:00+08:00">July 26, 2022</time></p>
+         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2199-01-01T00:00:00+08:00">January 01, 2199</time></p>
         
 
     
