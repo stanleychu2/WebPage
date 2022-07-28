@@ -7,7 +7,7 @@ categories:
   - Python
 ---
 
-## Intorductoin
+## Introduction
 
 `yield` is a special keyword like `return`. It can create an iterator in Python. If you want to get a value from an iterator, you need to use the `next` function or a `for` loop. Sometimes, we find that the list index can’t be used directly, `map` and `filter` output. It might mean that the output is an iterator yet to be called in the normal way.
 

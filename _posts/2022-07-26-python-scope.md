@@ -7,7 +7,7 @@ categories:
   - Python
 ---
 
-## Intorductoin
+## Introduction
 
 Python does not need to declare variables. However, when we assign a value to a variable. It would decide its scope, the valid zone where you can see the variable. Python searches a variable from inside to outside.
 

@@ -37,7 +37,7 @@
 
 
 
-  <meta property="og:description" content="Intorductoin">
+  <meta property="og:description" content="Introduction">
 
 
 
@@ -252,7 +252,7 @@
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="Python - Scope (nonlocal, global)">
-    <meta itemprop="description" content="Intorductoin">
+    <meta itemprop="description" content="Introduction">
     <meta itemprop="datePublished" content="July 26, 2022">
     
 
@@ -283,7 +283,7 @@
       
 
       <section class="page__content" itemprop="text">
-        <h2 id="intorductoin">Intorductoin</h2>
+        <h2 id="introduction">Introduction</h2>
 
 <p>Python does not need to declare variables. However, when we assign a value to a variable. It would decide its scope, the valid zone where you can see the variable. Python searches a variable from inside to outside.</p>
 
@@ -359,6 +359,13 @@
 </code></pre></div></div>
 <p>This is a pre-order <code class="language-plaintext highlighter-rouge">dfs</code>. We append a node value to the <code class="language-plaintext highlighter-rouge">result</code> outside the function. However, we don’t need to use any keywords. The <code class="language-plaintext highlighter-rouge">append</code> changes the list object itself.</p>
 
+<p>There are no block variables in Python, so the variable in the <code class="language-plaintext highlighter-rouge">if</code> statement can be access outside the <code class="language-plaintext highlighter-rouge">if</code> block.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># output: x = 10
+</span></code></pre></div></div>
+
 <hr />
 
         
@@ -419,7 +426,7 @@
 ">Previous</a>
     
     
-      <a href="http://localhost:4000/posts/2012/08/blog-post-4/" class="pagination--pager" title="Future Blog Post
+      <a href="http://localhost:4000/posts/2022/07/python-function" class="pagination--pager" title="Python - Map, Filter, Reduce
 ">Next</a>
     
   </nav>
@@ -476,6 +483,45 @@
 
         
          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2199-01-01T00:00:00+08:00">January 01, 2199</time></p>
+        
+
+    
+    
+    
+
+  </article>
+</div>
+
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/posts/2022/07/python-function" rel="permalink">Python - Map, Filter, Reduce
+</a>
+      
+    </h2>
+    
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  4 minute read
+	
+</p>
+    
+
+        
+         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2022-07-28T00:00:00+08:00">July 28, 2022</time></p>
         
 
     
